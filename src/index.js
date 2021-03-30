@@ -70,19 +70,23 @@ function shift(str, index=1) {
   var firstLetter = str[0]
   return end+firstLetter
 }
-// create Func
-console.log('running func')
 function makeHashTag(str) {
   var words = removeExtraSpaces(str).split(' ')
   var list = []
   if (words.length>3){
-    console.log(words)
     words.sort((a,b) => b.length - a.length);
-    console.log(words)
-    for (var i = 0; i < words.length; i++) {
-      list.push(upperFirst(words[i]))
+    for (var i = 0; i < 3; i++) {
+      list.push('#'+upperFirst(words[i]).toString())
     }
   }
-  return list.join('')
+  return list
 }
-console.log(makeHashTag('hello world foo   aaaaaaaaaa    bar!'))
+function isEmpty(str) {
+  var words = str.trim().split('')
+  for (var i = 0; i < words.length; i++) {
+    if (words[i]!=('\t'||'\r'||'\n')){
+      return false
+    }
+  }
+  return true
+}

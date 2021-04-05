@@ -15,6 +15,14 @@ function removeElement(array, elem) {
     array.splice(index, 1);
   }
 }
+function ksCase(str, type) {
+  var words = removeExtraSpaces(str).split(' ')
+  var list = []
+  for (var i = 0; i < words.length; i++) {
+    list.push(lowerFirst(words[i]))
+  }
+  return list.join(type)
+}
 // Assignment
 function capitalize(str){
   return upperFirst(str)
@@ -41,20 +49,10 @@ function removeExtraSpaces(str){
   return words.join(' ')
 }
 function kebabCase(str) {
-  var words = removeExtraSpaces(str).split(' ')
-  var list = []
-  for (var i = 0; i < words.length; i++) {
-    list.push(lowerFirst(words[i]))
-  }
-  return list.join('-')
+  return ksCase(str, '-')
 }
 function snakeCase(str) {
-  var words = removeExtraSpaces(str).split(' ')
-  var list = []
-  for (var i = 0; i < words.length; i++) {
-    list.push(lowerFirst(words[i]))
-  }
-  return list.join('_')
+  return ksCase(str, '_')
 }
 function camelCase(str) {
   var words = removeExtraSpaces(str).split(' ')

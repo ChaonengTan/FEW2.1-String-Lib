@@ -1,4 +1,4 @@
-https://img.shields.io/npm/v/few2.1-string-lib?style=plastic
+![npm](https://img.shields.io/npm/v/few2.1-string-lib?style=plastic)
 
 A useful little package that manipulates strings
 See below for more details

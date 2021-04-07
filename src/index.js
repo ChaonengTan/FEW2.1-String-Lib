@@ -1,10 +1,16 @@
 // handyFunctions
 function upperFirst(str) {
+  if (str == ''){
+    return ''
+  }
   var end = str.slice(1)
   var firstLetter = str[0].toUpperCase()
   return firstLetter + end
 }
 function lowerFirst(str) {
+  if (str == ''){
+    return ''
+  }
   var end = str.slice(1)
   var firstLetter = str[0].toLowerCase()
   return firstLetter + end
@@ -16,6 +22,9 @@ function removeElement(array, elem) {
   }
 }
 function ksCase(str, type) {
+  if (str == ''){
+    return ''
+  }
   var words = removeExtraSpaces(str).split(' ')
   var list = []
   for (var i = 0; i < words.length; i++) {
@@ -39,9 +48,8 @@ function capitalizeWords(str) {
   return list.join(' ')
 }
 function removeExtraSpaces(str){
-  var words = str.split(' ')
-  console.log(words)
-  for (var i = words.length; i > 1; i--) {
+  var words = str.trim().split(' ')
+  for (var i = words.length-1; i > -1; i--) {
     if (words[i]==''){
       removeElement(words, words[i])
     }
@@ -55,6 +63,9 @@ function snakeCase(str) {
   return ksCase(str, '_')
 }
 function camelCase(str) {
+  if (str == ''){
+    return ''
+  }
   var words = removeExtraSpaces(str).split(' ')
   var list = []
   list.push(words[0].toLowerCase())
@@ -64,16 +75,28 @@ function camelCase(str) {
   return list.join('')
 }
 function shift(str, index=1) {
+  if (str == ''){
+    return ''
+  }
   var end = str.slice(index)
   var firstLetter = str[0]
   return end+firstLetter
 }
 function makeHashTag(str) {
+  if (str == ''){
+    return ['']
+  }
   var words = removeExtraSpaces(str).split(' ')
   var list = []
   if (words.length>3){
     words.sort((a,b) => b.length - a.length);
     for (var i = 0; i < 3; i++) {
+      list.push('#'+upperFirst(words[i]).toString())
+    }
+  }
+  else{
+    words.sort((a,b) => b.length - a.length);
+    for (var i = 0; i < words.length; i++) {
       list.push('#'+upperFirst(words[i]).toString())
     }
   }

@@ -88,3 +88,15 @@ function isEmpty(str) {
   }
   return true
 }
+module.exports = {
+  capitalize,
+  allCaps,
+  capitalizeWords,
+  removeExtraSpaces,
+  kebabCase,
+  snakeCase,
+  camelCase,
+  shift,
+  makeHashTag,
+  isEmpty
+}

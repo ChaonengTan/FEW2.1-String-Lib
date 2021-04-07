@@ -1,0 +1,24 @@
+{
+  "name": "few2.1-string-lib",
+  "version": "1.0.2",
+  "description": "simple package to manage strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaonengTan/FEW2.1-String-Lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChaonengTan/FEW2.1-String-Lib/issues"
+  },
+  "homepage": "https://github.com/ChaonengTan/FEW2.1-String-Lib#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "keywords": []
+}

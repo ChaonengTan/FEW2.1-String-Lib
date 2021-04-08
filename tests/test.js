@@ -56,6 +56,7 @@ test('makeHashTag', () => {
     expect(sl.makeHashTag('WORLD')).toEqual(['#WORLD'])
     expect(sl.makeHashTag('')).toEqual([''])
     expect(sl.makeHashTag('foo bar')).toEqual(['#Foo', '#Bar'])
+    expect(sl.makeHashTag('foo bar awesomer epicest')).toEqual(['#Awesomer', '#Epicest', '#Foo'])
 })
 test('isEmpty', () => {
     expect(sl.isEmpty('hello')).toBe(false)

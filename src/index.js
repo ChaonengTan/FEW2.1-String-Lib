@@ -92,12 +92,12 @@ function makeHashTag(str) {
   if (words.length > 3) {
     words.sort((a, b) => b.length - a.length);
     for (let i = 0; i < 3; i += 1) {
-      list.push(`# ${upperFirst(words[i]).toString()}`);
+      list.push(`#${upperFirst(words[i]).toString()}`);
     }
   } else {
     words.sort((a, b) => b.length - a.length);
     for (let i = 0; i < words.length; i += 1) {
-      list.push(`# ${upperFirst(words[i]).toString()}`);
+      list.push(`#${upperFirst(words[i]).toString()}`);
     }
   }
   return list;

@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/few2.1-string-lib?style=plastic)
+![npm](https://img.shields.io/npm/v/few2.1-string-lib?style=plastic) ![Travis (.com)](https://img.shields.io/travis/com/ChaonengTan/FEW2.1-String-Lib) ![Coveralls](https://img.shields.io/coveralls/github/ChaonengTan/FEW2.1-String-Lib)
 
 A useful little package that manipulates strings
 See below for more details

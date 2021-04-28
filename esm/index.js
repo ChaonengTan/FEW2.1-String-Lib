@@ -105,13 +105,13 @@ function makeHashTag(str) {
 function isEmpty(str) {
   const words = str.trim().split('');
   for (let i = 0; i < words.length; i += 1) {
-    if (words[i] !== ('\t' || '\r' || '\n')) {
+    if (words[i] !== ('\t'  )) {
       return false;
     }
   }
   return true;
 }
-export default {
+var index = {
   capitalize,
   allCaps,
   capitalizeWords,
@@ -123,3 +123,5 @@ export default {
   makeHashTag,
   isEmpty,
 };
+
+export default index;

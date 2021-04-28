@@ -1,4 +1,4 @@
-const sl = require('../src/index')
+const sl = require('../umd/stringLib')
 test('Sanity check', () => {
     expect(2+2).toBe(4)
 })

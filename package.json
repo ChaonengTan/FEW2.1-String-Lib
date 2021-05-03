@@ -1,6 +1,6 @@
 {
   "name": "few2.1-string-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "simple package to manage strings",
   "main": "umd/stringLib.js",
   "module": "esm/index.js",
